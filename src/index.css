@@ -43,7 +43,7 @@ body {
 
 .main {
   margin-top: 2.4rem;
-  /* height: calc(100vh - 7.2rem - 3 * 2.4rem); */
+  height: calc(100vh - 7.2rem - 3 * 2.4rem);
   display: flex;
   gap: 2.4rem;
   justify-content: center;
@@ -54,8 +54,17 @@ body {
   max-width: 42rem;
   background-color: var(--color-background-500);
   border-radius: 0.9rem;
-  /* overflow: scroll; */
+  overflow: auto;
   position: relative;
+}
+/* Hide scrollbar for webkit browsers (Chrome, Safari) */
+.box::-webkit-scrollbar {
+  display: none; /* Hides the scrollbar */
+}
+
+/* Optional: Hide scrollbar for Firefox */
+.box {
+  scrollbar-width: none; /* Hides scrollbar in Firefox */
 }
 
 .loader {
@@ -136,7 +145,6 @@ body {
 }
 
 .list {
-  height: 100vh;
   list-style: none;
   padding: 0.8rem 0;
   /* overflow: scroll; */
